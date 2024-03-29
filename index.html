@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queenlity - парикмахерская студия</title>
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <svg style="display: none">
+        <symbol id="woman" viewBox="0 0 24 24">
+            <g>
+                <path d="M18.984,16.109c0.619-1.55,0.971-3.328,0.971-5.22C19.955,4.876,16.395,0,12,0S4.045,4.876,4.045,10.89
+                c0,1.977,0.385,3.827,1.059,5.425c0.07-0.145,0.156-0.281,0.244-0.418c-0.563,0.955-0.896,2.012-0.896,3.046V24h15.295v-5.058
+                c0-1.033-0.332-2.087-0.895-3.041C18.895,15.971,18.945,16.036,18.984,16.109z M6.49,8.072c0-0.169,0.012-0.335,0.025-0.499
+                c0.469-0.82,0.916-1.512,1.324-2.089c0.654-0.914,1.213-1.54,1.625-1.951c0.461-0.455,0.592-0.497,0.592-0.497
+                s0.238,0.095,0.281,0.143c0.346,0.395,1.713,1.453,3.25,2.547c1.428,1.022,2.996,2.072,4.014,2.647
+                c-0.158,2.927-2.582,5.262-5.547,5.262C8.986,13.635,6.49,11.14,6.49,8.072z M12.332,20.708l-4.146-1.415l0.295-5.724
+                c1.029,0.672,2.256,1.065,3.574,1.065c1.326,0,2.561-0.398,3.594-1.078l0.752,5.657L12.332,20.708z" />
+            </g>
+        </symbol>
+        <symbol id="scissors" viewBox="0 0 512 512">
+            <g>
+                <path
+                    d="   M373.9,24l-1.2-8L162.9,391.7c-6.3,11.4-20.6,15.5-32.1,9.5c-0.2-0.1-0.3-0.2-0.5-0.3c-22.2-11.4-49.8-3.3-62.4,18.2   c-13.5,23-5.4,52.5,17.7,65.4c22.9,12.8,51.7,4.6,64.5-18.3l55.8-100c3.2-5.7,10.3-7.7,16-4.5h0c6.5,3.6,14.6,1.3,18.2-5.2   l108.4-194.2C372.1,120.3,381,71.6,373.9,24z M127.1,453.3c-5.7,10.1-18.5,13.8-28.6,8.1c-10.1-5.7-13.8-18.5-8.1-28.6   c5.7-10.1,18.5-13.8,28.6-8.1C129.2,430.4,132.8,443.2,127.1,453.3z M259.4,284.2c-6.6,0-11.9-5.3-11.9-11.9s5.3-11.9,11.9-11.9   c6.6,0,11.9,5.3,11.9,11.9S265.9,284.2,259.4,284.2z"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" />
+                <path
+                    d="   M444.6,425.4c-12.2-21.8-39.6-30.4-62-19.5c-0.2,0.1-0.3,0.2-0.5,0.3c-11.6,5.8-25.8,1.3-31.9-10.1l-53.8-102.8l-29.2,52.3   l6.4,13.6c3.5,6.5,11.6,9,18.1,5.6h0c5.7-3,12.9-0.9,15.9,4.9l53.7,101.2c12.3,23.1,41,31.9,64.1,19.6   C448.9,478,457.6,448.7,444.6,425.4z M413.1,467.2c-10.3,5.4-23,1.5-28.4-8.7c-5.4-10.3-1.5-23,8.7-28.4c10.3-5.4,23-1.5,28.4,8.7   C427.2,449,423.3,461.7,413.1,467.2z"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" />
+                <path d="   M216.8,255.2l29.2-52.4L148.5,16l-1.4,8c-8.1,47.5-0.3,96.3,22.3,138.8L216.8,255.2z"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" />
+            </g>
+        </symbol>
+        <symbol id="kids" viewBox="0 0 22.577778 22.577778">
+            <defs id="defs825">
+                <pattern id="EMFhbasepattern" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-9" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-0" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-7" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-2" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-98" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-6" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-01" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-07" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-8" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-4" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-40" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-08" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-04" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-014" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-27" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-09" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-5" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+                <pattern id="EMFhbasepattern-018" patternUnits="userSpaceOnUse" width="6" height="6" x="0" y="0" />
+            </defs>
+            <sodipodi:namedview inkscape:lockguides="true" id="base" pagecolor="#ffffff" bordercolor="#666666"
+                borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="6.2578125"
+                inkscape:cx="42.666667" inkscape:cy="42.666667" inkscape:document-units="pt"
+                inkscape:current-layer="layer1" showgrid="false" units="pt" inkscape:window-width="1366"
+                inkscape:window-height="705" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"
+                inkscape:pagecheckerboard="true" inkscape:showpageshadow="false" inkscape:object-paths="true"
+                inkscape:snap-intersection-paths="true" inkscape:snap-smooth-nodes="true" inkscape:snap-midpoints="true"
+                showguides="true" inkscape:snap-bbox="true" inkscape:bbox-nodes="true" inkscape:snap-nodes="false"
+                inkscape:snap-global="true" inkscape:document-rotation="0">
+                <inkscape:grid type="xygrid" id="grid1378" />
+                <sodipodi:guide position="0.97013831,21.607643" orientation="78.000048,0" id="guide1380"
+                    inkscape:locked="true" />
+                <sodipodi:guide position="0.97013831,0.97013129" orientation="0,78.000005" id="guide1382"
+                    inkscape:locked="true" />
+                <sodipodi:guide position="21.607639,0.97013129" orientation="-78.000048,0" id="guide1384"
+                    inkscape:locked="true" />
+                <sodipodi:guide position="21.607639,21.607643" orientation="0,-78.000005" id="guide1386"
+                    inkscape:locked="true" />
+            </sodipodi:namedview>
+            <metadata id="metadata828">
+                <rdf:RDF>
+                    <cc:Work rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                        <dc:title></dc:title>
+                    </cc:Work>
+                </rdf:RDF>
+            </metadata>
+            <g inkscape:label="Icon" inkscape:groupmode="layer" id="layer1" transform="translate(0,-274.42223)">
+                <path id="path982"
+                    font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
+                    d="M 1.3042923,293.28708 H 21.275437 c 0.184083,-3.4e-4 0.332918,-0.15007 0.332199,-0.33416 -6.66e-4,-0.11901 -0.06493,-0.22855 -0.168377,-0.28735 0.105649,-0.15722 0.168377,-0.34589 0.168377,-0.54673 0,-0.54756 -0.428671,-0.9908 -0.960852,-1.04667 -1.392554,-0.14623 -2.193853,-0.5082 -2.727179,-0.9511 -0.533323,-0.4429 -0.81715,-0.98715 -1.115575,-1.56739 -0.298422,-0.58022 -0.611883,-1.20178 -1.238443,-1.67077 -0.575153,-0.43051 -1.392788,-0.70331 -2.612113,-0.74567 v -3.00412 h 0.665704 c 0.289773,2.7e-4 0.441513,-0.34415 0.245739,-0.55779 l -3.9630245,-4.32188 c -0.1926942,-0.15447 -0.3230895,-0.1605 -0.4862737,-0.003 l -4.0273841,4.3219 c -0.1991255,0.21271 -0.04823,0.5605 0.2431387,0.56039 h 0.6663539 v 1.39187 c -0.1052942,-0.0383 -0.2171962,-0.0624 -0.3348029,-0.0624 -0.5475388,0 -0.9972623,0.45232 -0.9972557,0.99986 v 0.49862 H 2.967902 v -0.49862 c 3.4e-6,-0.54754 -0.4497169,-0.99986 -0.9972558,-0.99986 -0.5475388,0 -1.00051103,0.45232 -1.00050763,0.99986 v 7.49114 c 0,0.185 0.14981693,0.33424 0.33415373,0.33353 z m 8.3518624,-14.31854 3.2063083,3.49884 H 6.3958921 Z m -2.6927226,4.16455 h 5.3243369 v 4.65863 H 6.9634321 Z m 1.6629605,0.6657 c -0.5475455,0 -0.9972558,0.45036 -0.9972558,0.99791 v 1.33141 c 0,0.54754 0.4497103,0.99791 0.9972558,0.99791 H 10.62416 c 0.547545,0 0.997904,-0.45037 0.997904,-0.99791 v -1.33141 c 0,-0.54755 -0.450359,-0.99791 -0.997904,-0.99791 z m 0,0.66376 H 10.62416 c 0.187771,0 0.331551,0.14638 0.331551,0.33415 v 1.33141 c 0,0.18777 -0.14378,0.33221 -0.331551,0.33221 H 8.6263926 c -0.187772,0 -0.3315509,-0.14444 -0.3315509,-0.33221 v -1.33141 c 0,-0.18777 0.1437789,-0.33415 0.3315509,-0.33415 z m -6.6557464,0.66571 c 0.1877688,0 0.3315509,0.14638 0.3315509,0.33415 v 7.15892 H 1.6364924 v -7.15892 c 0,-0.18777 0.1463852,-0.33415 0.3341538,-0.33415 z m 3.9922782,0 c 0.1877687,0 0.3348029,0.14638 0.3348029,0.33415 0,2.3863 0,4.77261 0,7.15892 H 5.6313734 v -7.15892 c -3.2e-6,-0.18777 0.1437823,-0.33415 0.331551,-0.33415 z m -2.9950224,1.49913 h 1.9977667 v 0.99466 H 2.967902 Z m 9.985572,0.17552 c 1.112306,0.0401 1.769151,0.27922 2.211648,0.61046 0.485422,0.36333 0.748434,0.86467 1.046667,1.44451 0.29823,0.57988 0.632014,1.23381 1.28265,1.77415 0.650637,0.54033 1.602085,0.94506 3.083436,1.10062 0.199002,0.0209 0.363408,0.19843 0.363408,0.38616 0,0.18767 -0.133607,0.32213 -0.31205,0.31204 -1.665277,-0.0935 -2.68439,-0.41552 -3.348678,-0.82043 -0.664287,-0.4049 -0.995525,-0.8947 -1.285253,-1.42307 -0.289725,-0.52836 -0.522294,-1.10573 -1.007008,-1.57715 -0.437178,-0.4252 -1.074012,-0.71981 -2.03482,-0.79833 z m -9.985572,1.48549 h 1.9977667 v 1.04147 H 2.967902 Z m 3.9955301,0.16903 h 3.3291729 v 4.1639 H 6.9634321 Z m 3.9922789,0 h 0.666353 v 4.1639 h -0.666353 z m 1.332058,0 c 0.778729,1e-4 1.716829,0.14144 2.235703,0.63189 0.360246,0.35038 0.578821,0.85238 0.889991,1.41984 0.311167,0.56747 0.732132,1.19016 1.520589,1.67075 0.272433,0.16606 0.590018,0.31375 0.95565,0.44142 h -5.601933 z m -9.319867,1.53814 h 1.9977667 v 0.95825 H 2.967902 Z m 0,1.62461 h 1.9977667 v 1.00115 H 2.967902 Z"
+                    sodipodi:nodetypes="ccccscsssccccccccccssccsscccccccscccssssssssssssssssssssccsssccccscccccccsssscsssccccccccccccccccccccscccccccccccccc" />
+            </g>
+
+        </symbol>
+        <symbol id="hairdryer" viewBox="0 0 16.933334 16.933333">
+            <defs id="defs973" />
+            <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
+                inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="8.546875" inkscape:cx="32"
+                inkscape:cy="32" inkscape:document-units="pt" inkscape:current-layer="layer1" showgrid="false"
+                units="pt" inkscape:window-width="1366" inkscape:window-height="716" inkscape:window-x="-8"
+                inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:snap-bbox="true"
+                inkscape:bbox-nodes="true" inkscape:snap-nodes="false" showguides="false">
+                <inkscape:grid type="xygrid" id="grid1526" />
+                <sodipodi:guide position="0.97013909,15.963209" orientation="56.666615,0" id="guide1528"
+                    inkscape:locked="false" />
+                <sodipodi:guide position="0.97013909,0.97016731" orientation="0,56.666667" id="guide1530"
+                    inkscape:locked="false" />
+                <sodipodi:guide position="15.963195,0.97016731" orientation="-56.666615,0" id="guide1532"
+                    inkscape:locked="false" />
+                <sodipodi:guide position="15.963195,15.963209" orientation="0,-56.666667" id="guide1534"
+                    inkscape:locked="false" />
+            </sodipodi:namedview>
+            <metadata id="metadata976">
+                <rdf:RDF>
+                    <cc:Work rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                        <dc:title></dc:title>
+                    </cc:Work>
+                </rdf:RDF>
+            </metadata>
+            <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-280.06668)">
+                <path
+                    style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+                    d="m 11.913581,281.0471 c -1.305778,0 -2.1612857,0.38081 -2.9234867,0.76079 -0.7622009,0.37997 -1.4296083,0.75089 -2.5071205,0.84675 -0.143825,0.0128 -0.6514352,0.016 -1.0899411,0.0123 -0.4226999,-0.004 -0.7734793,-0.0111 -0.800267,-0.0111 a 0.32645871,0.32645871 0 0 0 -0.00326,-6.4e-4 l -3.2609114,-0.32469 a 0.32599649,0.32599649 0 0 0 -0.03374,-0.002 0.32599649,0.32599649 0 0 0 -0.32469247,0.32724 v 4.88945 A 0.32599649,0.32599649 0 0 0 1.3286,287.86729 l 3.244359,-0.32342 c 0.050228,0.002 1.5825766,0.0719 1.9462314,0.0993 0.4115293,0.031 0.7848587,0.10201 1.1364171,0.19735 0.061943,0.0313 1.428637,0.7381 1.428637,2.29767 v 3.273 c 1.564e-4,0.0177 0.00131,0.0354 0.00446,0.0529 0,0 0.056681,0.33478 0.3151417,0.64493 0.2365584,0.28386 0.6620358,0.55308 1.2943038,0.59717 -0.01304,0.17197 -0.0358,0.32118 -0.08849,0.40619 -0.0832,0.13417 -0.233964,0.25465 -0.7818036,0.25465 H 8.7570107 c -0.2379339,0 -0.3585797,-0.0736 -0.4666626,-0.22601 -0.10808,-0.15237 -0.1859004,-0.412 -0.1859004,-0.75761 V 292.434 c 0,0 0.00511,-0.31315 -0.1559801,-0.63538 -0.1611077,-0.32221 -0.5502725,-0.66847 -1.1478748,-0.66847 -0.5975989,0 -0.984218,0.34626 -1.1453288,0.66847 -0.1611109,0.32223 -0.1566158,0.63538 -0.1566158,0.63538 v 1.30194 c 0,0.43472 0.6525631,0.43472 0.6525631,0 V 292.434 c 0,0 0.00326,-0.17707 0.086585,-0.34379 0.083369,-0.16673 0.1825071,-0.30815 0.5627959,-0.30815 0.3802921,0 0.4819797,0.14142 0.565345,0.30815 0.083369,0.16672 0.086583,0.34379 0.086583,0.34379 v 1.94941 c 0,0.43621 0.087704,0.82798 0.305591,1.13514 0.2178839,0.30717 0.5849092,0.50105 0.9988995,0.50105 h 1.0708429 c 0.6646794,0 1.1176584,-0.20869 1.3375984,-0.56344 0.160006,-0.25809 0.191947,-0.53296 0.197997,-0.78944 0.465186,-0.096 0.790094,-0.32241 0.986168,-0.5577 0.25846,-0.31015 0.315141,-0.64493 0.315141,-0.64493 0.002,-0.01 0.0033,-0.0207 0.0044,-0.0312 l 0.308137,-4.42979 c 1.7179,-0.46885 2.985831,-2.03876 2.985879,-3.90329 -5.5e-5,-2.23305 -1.816657,-4.0522 -4.049718,-4.05227 z m -0.187175,0.65893 v 1.13641 c -1.102011,0.16013 -1.9538717,1.11187 -1.9538717,2.25692 0,1.14507 0.8518607,2.09526 1.9538717,2.25501 v 1.13196 c -0.802757,-0.0517 -1.486531,-0.33718 -2.247366,-0.66275 -0.821282,-0.35142 -1.7284813,-0.74093 -2.9120294,-0.83018 -0.3573346,-0.027 -1.324283,-0.0692 -1.6839318,-0.0853 v -3.59769 c 0.1560551,0.004 0.2369071,0.005 0.5029522,0.009 0.4431835,0.004 0.9139045,0.007 1.1548796,-0.014 1.2042339,-0.10718 1.9943829,-0.54023 2.7407681,-0.91231 0.7050105,-0.35148 1.3758083,-0.65349 2.4447273,-0.68631 z m 0.651929,0.0287 c 1.659194,0.22645 2.932992,1.64202 2.933037,3.36468 -4.5e-5,1.72278 -1.273716,3.13678 -2.933037,3.36278 v -1.10713 c 1.102963,-0.15891 1.956417,-1.1099 1.956417,-2.25565 0,-1.14572 -0.853454,-2.09828 -1.956417,-2.25754 z m -10.7561677,1.2784 2.6083484,0.26229 v 3.64608 l -2.6083484,0.26166 v -0.61817 h 0.6525663 c 0.434728,0 0.434728,-0.65194 0,-0.65194 H 1.6221673 V 285.4241 H 2.926661 c 0.4347183,0 0.4347183,-0.65192 0,-0.65192 H 1.6221673 v -0.48831 h 0.6525663 c 0.4347182,0 0.4347182,-0.65193 0,-0.65193 H 1.6221673 Z m 10.4314777,0.45519 c 0.903982,0 1.628545,0.72711 1.628545,1.63109 0,0.90399 -0.724563,1.62918 -1.628545,1.62918 -0.903986,0 -1.631729,-0.72519 -1.631729,-1.62918 0,-0.90398 0.727743,-1.63109 1.631729,-1.63109 z m -0.0076,0.48576 a 0.32599649,0.32599649 0 0 0 -0.223464,0.0987 l -0.651928,0.65194 a 0.32668037,0.32668037 0 0 0 0.461572,0.4622 l 0.652563,-0.65193 a 0.32599649,0.32599649 0 0 0 -0.238743,-0.56089 z m 0.656385,0.97662 a 0.32599649,0.32599649 0 0 0 -0.0038,6.6e-4 0.32599649,0.32599649 0 0 0 -0.2241,0.0987 l -0.651929,0.65193 a 0.32668037,0.32668037 0 0 0 0.462207,0.46157 l 0.651928,-0.65194 a 0.32599649,0.32599649 0 0 0 -0.234287,-0.56088 z m -3.4958479,3.48502 c 0.00567,0.002 0.011507,0.005 0.017178,0.007 0.8212359,0.3514 1.6514779,0.7102 2.6853829,0.72642 0.0016,1e-5 0.0029,1e-5 0.0045,0 0.135914,0 0.270486,-0.007 0.403,-0.0203 l -0.296681,4.23625 c -9.77e-4,0.006 -0.02526,0.14949 -0.171257,0.32469 -0.148995,0.17879 -0.401725,0.37309 -0.972161,0.37309 -0.570437,0 -0.822534,-0.1943 -0.9715247,-0.37309 -0.1447149,-0.17366 -0.1672716,-0.31359 -0.1687123,-0.32214 v -0.28394 h 0.976616 c 0.180082,6.9e-4 0.327238,-0.14524 0.327874,-0.32532 v -1.95579 c -6.35e-4,-0.18058 -0.147775,-0.32652 -0.327857,-0.32583 H 9.7362448 v -0.3387 c 0,-0.71072 -0.2326273,-1.28073 -0.5296909,-1.72276 z m 0.529691,2.71403 H 10.3882 v 1.30385 H 9.7362325 Z"
+                    id="path964" inkscape:connector-curvature="0" />
+            </g>
+        </symbol>
+
+        <symbol id="arrow" viewBox="0 0 39 37">
+            <path
+                d="M9.59245 20.8752L22.3319 33.6148L18.9732 36.9735L0.5 18.5002L18.9732 0.0272522L22.3319 3.38598L9.59245 16.1252L38.5 16.1252V20.8752L9.59245 20.8752Z" />
+        </symbol>
+
+        <symbol id="vk" viewBox="0 0 50 50">
+            <path
+                d="M8.875 8.875C6.25 11.525 6.25 15.7625 6.25 24.25V25.75C6.25 34.225 6.25 38.4625 8.875 41.125C11.525 43.75 15.7625 43.75 24.25 43.75H25.75C34.225 43.75 38.4625 43.75 41.125 41.125C43.75 38.475 43.75 34.2375 43.75 25.75V24.25C43.75 15.775 43.75 11.5375 41.125 8.875C38.475 6.25 34.2375 6.25 25.75 6.25H24.25C15.775 6.25 11.5375 6.25 8.875 8.875ZM12.5753 17.6629H16.8753C17.0128 24.8129 20.1628 27.8379 22.6627 28.4629V17.6629H26.7002V23.8254C29.1627 23.5629 31.7627 20.7504 32.6377 17.6504H36.6627C36.3346 19.2551 35.679 20.7749 34.7369 22.1148C33.795 23.4546 32.5867 24.5858 31.1877 25.4379C32.749 26.2148 34.1277 27.314 35.2329 28.6629C36.3383 30.0117 37.1452 31.5794 37.6002 33.2629H33.1627C32.2127 30.3004 29.8377 28.0004 26.7002 27.6879V33.2629H26.2127H26.2002C17.6503 33.2629 12.7753 27.4129 12.5753 17.6629Z"
+                fill="white" />
+        </symbol>
+
+        <symbol id="vk" viewBox="0 0 50 50">
+            <path
+                d="M8.875 8.875C6.25 11.525 6.25 15.7625 6.25 24.25V25.75C6.25 34.225 6.25 38.4625 8.875 41.125C11.525 43.75 15.7625 43.75 24.25 43.75H25.75C34.225 43.75 38.4625 43.75 41.125 41.125C43.75 38.475 43.75 34.2375 43.75 25.75V24.25C43.75 15.775 43.75 11.5375 41.125 8.875C38.475 6.25 34.2375 6.25 25.75 6.25H24.25C15.775 6.25 11.5375 6.25 8.875 8.875ZM12.5753 17.6629H16.8753C17.0128 24.8129 20.1628 27.8379 22.6627 28.4629V17.6629H26.7002V23.8254C29.1627 23.5629 31.7627 20.7504 32.6377 17.6504H36.6627C36.3346 19.2551 35.679 20.7749 34.7369 22.1148C33.795 23.4546 32.5867 24.5858 31.1877 25.4379C32.749 26.2148 34.1277 27.314 35.2329 28.6629C36.3383 30.0117 37.1452 31.5794 37.6002 33.2629H33.1627C32.2127 30.3004 29.8377 28.0004 26.7002 27.6879V33.2629H26.2127H26.2002C17.6503 33.2629 12.7753 27.4129 12.5753 17.6629Z"
+                fill="white" />
+        </symbol>
+
+        <symbol id="tel" viewBox="0 0 50 50">
+            <path
+                d="M19.5116 22.2544C21.4625 25.685 24.315 28.5375 27.7456 30.4883L29.5883 27.9085C30.201 27.051 31.3575 26.786 32.2825 27.2913C35.2133 28.8923 38.4523 29.8652 41.831 30.1327C42.9146 30.2185 43.75 31.1227 43.75 32.2096V41.5071C43.75 42.5752 42.9421 43.4702 41.8796 43.5794C40.7756 43.6929 39.6619 43.75 38.5417 43.75C20.7075 43.75 6.25 29.2925 6.25 11.4583C6.25 10.3381 6.30713 9.2244 6.4206 8.12033C6.52979 7.05781 7.42488 6.25 8.49302 6.25H17.7905C18.8773 6.25 19.7815 7.0855 19.8673 8.16894C20.1347 11.5477 21.1077 14.7867 22.7087 17.7176C23.214 18.6425 22.949 19.799 22.0915 20.4116L19.5116 22.2544ZM14.2589 20.8858L18.2171 18.0585C17.0947 15.6357 16.3256 13.0663 15.9318 10.4167H10.4356C10.423 10.7632 10.4167 11.1104 10.4167 11.4583C10.4167 26.9912 23.0087 39.5833 38.5417 39.5833C38.8896 39.5833 39.2369 39.5771 39.5833 39.5644V34.0681C36.9337 33.6744 34.3644 32.9052 31.9415 31.7829L29.1142 35.7412C27.9704 35.2969 26.8658 34.774 25.8071 34.1794L25.686 34.1104C21.6035 31.789 18.2111 28.3965 15.8896 24.314L15.8207 24.1929C15.226 23.1342 14.7032 22.0296 14.2589 20.8858Z"
+                fill="white" />
+        </symbol>
+
+        <symbol id="loc" viewBox="0 0 50 50">
+            <path
+                d="M38.2583 36.1751L25 49.4332L11.7418 36.1751C4.41942 28.8526 4.41942 16.9808 11.7418 9.6585C19.0641 2.33616 30.9358 2.33616 38.2583 9.6585C45.5806 16.9808 45.5806 28.8526 38.2583 36.1751ZM25 31.2501C29.6023 31.2501 33.3333 27.519 33.3333 22.9167C33.3333 18.3144 29.6023 14.5834 25 14.5834C20.3976 14.5834 16.6667 18.3144 16.6667 22.9167C16.6667 27.519 20.3976 31.2501 25 31.2501ZM25 27.0834C22.6988 27.0834 20.8333 25.218 20.8333 22.9167C20.8333 20.6156 22.6988 18.7501 25 18.7501C27.3013 18.7501 29.1667 20.6156 29.1667 22.9167C29.1667 25.218 27.3013 27.0834 25 27.0834Z"
+                fill="white" />
+        </symbol>
+
+    </svg>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="index.html" class="logo">
+                        <div class="title">
+                            Queenlity
+                        </div>
+                        <div class="subtitle">
+                            Парикмахерская студия
+                        </div>
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <a class="nav__item" data-scroll="#advantages">Преимущества</a>
+                    <a class="nav__item" data-scroll="#price-list">Прайс-лист</a>
+                    <a class="nav__item" data-scroll="#works-slider">Фото работ</a>
+                    <a class="nav__item" data-scroll="#hair-products">Про уход</a>
+                    <a class="nav__item" data-scroll="#contacts">Контакты</a>
+                </nav>
+
+                <div class="header__burger"></div>
+            </div>
+
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Intro -->
+    <section class="section__intro">
+        <div class="container">
+            <div class="intro__inner">
+                <div class="container__small">
+                    <div class="slider__inner" id="slider">
+                        <div class="intro__slider__inner">
+                            <div class="intro__item active" id="0">
+                                <img class="slider__img" src="assets/images/introSlider/slider1.jpg" alt="" />
+                                <div class="item__info">
+                                    <div class="title">
+                                        <h2>Мы открылись!</h2>
+                                    </div>
+                                    <div class="text">
+                                        <h5>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi optio
+
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro__item" id="1">
+                                <img class="slider__img" src="assets/images/introSlider/slider1.jpg" alt="" />
+                                <div class="item__info">
+                                    <div class="title">
+                                        <h2>АААААААААА</h2>
+                                    </div>
+                                    <div class="text">
+                                        <h5>
+                                            Говно говно
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro__item" id="2">
+                                <img class="slider__img" src="assets/images/introSlider/slider1.jpg" alt="" />
+                                <div class="item__info">
+                                    <div class="title">
+                                        <h2>Ты больше не армянин</h2>
+                                    </div>
+                                    <div class="text">
+                                        <h5>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi optio
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="intro__buttons">
+                            <div class="button active" id="0">
+                                <div class="progress__bar"></div>
+                            </div>
+                            <div class="button" id="1">
+                                <div class="progress__bar"></div>
+                            </div>
+                            <div class="button" id="2">
+                                <div class="progress__bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /Intro -->
+
+    <!-- Advantages-->
+    <section class="section__advantages" id="advantages">
+        <div class="container">
+            <div class="advantages__inner">
+                <div class="advantages__item">
+                    <svg class="advantages__icon">
+                        <use xlink:href="#woman">
+                    </svg>
+                    <div class="title">
+                        Индивидуальный подбор окрашивания
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <svg class="advantages__icon">
+                        <use xlink:href="#scissors">
+                    </svg>
+                    <div class="title">
+                        Квалифицированный мастер
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <svg class="advantages__icon">
+                        <use xlink:href="#kids">
+                    </svg>
+                    <div class="title">
+                        Детская комната напротив студии
+                    </div>
+                </div>
+                <div class="advantages__item">
+                    <svg class="advantages__icon">
+                        <use xlink:href="#hairdryer">
+                    </svg>
+                    <div class="title">
+                        Современные техники окрашивания
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Advantages-->
+
+    <!-- Price-list -->
+    <section class="section__price-list" id="price-list">
+        <div class="container">
+            <div class="price-list__inner">
+                <div class="price-list__top">
+                    <div class="title">Прайс&#8209Лист</div>
+                    <hr>
+                    <div class="switcher">
+                        <div class="switcher__item active" id="0">Стрижки</div>
+                        <div class="switcher__item" id="1">Уход</div>
+                        <div class="switcher__item" id="2">Окрашивание</div>
+                    </div>
+                </div>
+                <div class="price-list__bottom">
+                    <nobr>
+                        <div class="list__inner">
+                            <div class="list__inner--item active">
+                                <div class="list__item">
+                                    <div class="title">Стрижка мужская (Машинка)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">400Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Стрижка (Ножницы, машинка)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">600Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Камуфляж седины</div>
+                                    <div class="dots"></div>
+                                    <div class="price">800Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Женская стрижка</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Кончики (один срез, без матья)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Челка</div>
+                                    <div class="dots"></div>
+                                    <div class="price">200Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Укладка коротких волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">700Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Укладка средних волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">800Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Укладка средних волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Укладка на плойку</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Прическа</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1500-2000Р</div>
+                                </div>
+                            </div>
+                            <div class="list__inner--item">
+                                <div class="list__item">
+                                    <div class="title">Спа-уход окрашиванием (к чеку)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">300Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Спа-уход со стрижкой</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Самостоятельная процедура</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1000Р</div>
+                                </div>
+                            </div>
+                            <div class="list__inner--item">
+                                <div class="list__item">
+                                    <div class="title">Окрашивание в один тон коротких волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Окрашивание в один тон средних волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">2000-2500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Окрашивание в один тон длинных волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">3000-3500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Окрашивание корней (короткие волосы)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Окрашивание корней (средние волосы)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1700Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Окрашивание корней (длинные волосы)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">2000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Окрашивание своей краской</div>
+                                    <div class="dots"></div>
+                                    <div class="price">1000-1500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Мелированние коротких волос (только макушка)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">2900Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Мелированние коротких волос (все волосы)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">3500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Мелированние средних волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">4000-4500Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Мелированние длинных волос</div>
+                                    <div class="dots"></div>
+                                    <div class="price">5000-7000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Тотал Блонд (корни до 2 см.)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">3500-4000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Тотал Блонд (корни до 5 см.)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">40005000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Тотал Блонд сложный (чистка пятен, вся длина, очень длинные корни)</div>
+                                    <div class="dots"></div>
+                                    <div class="price">5000-8000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Airtouch</div>
+                                    <div class="dots"></div>
+                                    <div class="price">6000-9000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Топовая зона Airtouch</div>
+                                    <div class="dots"></div>
+                                    <div class="price">4000-5000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Выход с темного в Airtouch</div>
+                                    <div class="dots"></div>
+                                    <div class="price">11000-13000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Контуринг, скрытое окрашивание, кончики</div>
+                                    <div class="dots"></div>
+                                    <div class="price">3000-5000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Сложные техники</div>
+                                    <div class="dots"></div>
+                                    <div class="price">6000-8000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title">Выход с черного</div>
+                                    <div class="dots"></div>
+                                    <div class="price">6000-10000Р</div>
+                                </div>
+                                <div class="list__item">
+                                    <div class="title" style="text-decoration: underline;">Цена может меняться в зависимости от сложности, слишком густых или длинных волос, дополнительных услуг.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </nobr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Price-list-->
+
+    <!-- Works-Slider -->
+    <section class="section__works-slider" id="works-slider">
+        <div class="container">
+            <div class="works-slider__inner">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works2.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works3.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works4.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works5.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works6.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works7.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works8.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img"src="assets/images/worksSlider/works9.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works10.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works11.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works12.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="works__img" src="assets/images/worksSlider/works13.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="works-slider__switcher">
+                    <div class="title">
+                        <nobr>Мои работы</nobr>
+                    </div>
+                    <hr>
+                    <div class="works-slider__buttons">
+                        <div class="button-prev">
+                            <svg class="works-slider__arrow">
+                                <use xlink:href="#arrow">
+                            </svg>
+                        </div>
+                        <div class="button-next">
+                            <svg class="works-slider__arrow right">
+                                <use xlink:href="#arrow">
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Works-Slider -->
+
+    <!-- Hair-products -->
+    <section class="section__hair-products" id="hair-products">
+        <div class="container">
+            <div class="hair-products__inner">
+                <div class="hair-products__left">
+                    <div class="title">Топ 10 Продуктов для волос </div>
+                    <div class="text">Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI
+                        века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+                        используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без
+                        заметных изменений пять веков, но и перешагнул в электронный дизайн.</div>
+                </div>
+                <div class="hair-products__right">
+                    <div class="swiper swiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__inner">
+                                    <img class="hair-products__img" src="assets/images/hairProducts/hair1.jpg " alt=""
+                                        srcset="">
+                                    <div class="swiper-slide__text">
+                                        <div class="title">
+                                            <div class="number">1</div>
+                                            <div class="text">Шампунь Эстель</div>
+                                        </div>
+                                        <div class="description">
+                                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
+                                            XVI века. В то время некий безымянный печатник создал большую коллекцию
+                                            размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__inner">
+                                    <img class="hair-products__img" src="assets/images/hairProducts/hair1.jpg " alt=""
+                                        srcset="">
+                                    <div class="swiper-slide__text">
+                                        <div class="title">
+                                            <div class="number">1</div>
+                                            <div class="text">Шампунь Эстель</div>
+                                        </div>
+                                        <div class="description">
+                                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
+                                            XVI века. В то время некий безымянный печатник создал большую коллекцию
+                                            размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__inner">
+                                    <img class="hair-products__img" src="assets/images/hairProducts/hair1.jpg " alt=""
+                                        srcset="">
+                                    <div class="swiper-slide__text">
+                                        <div class="title">
+                                            <div class="number">1</div>
+                                            <div class="text">Шампунь Эстель</div>
+                                        </div>
+                                        <div class="description">
+                                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
+                                            XVI века. В то время некий безымянный печатник создал большую коллекцию
+                                            размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide__inner">
+                                    <img class="hair-products__img" src="assets/images/hairProducts/hair1.jpg " alt=""
+                                        srcset="">
+                                    <div class="swiper-slide__text">
+                                        <div class="title">
+                                            <div class="number">1</div>
+                                            <div class="text">Шампунь Эстель</div>
+                                        </div>
+                                        <div class="description">
+                                            Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
+                                            XVI века. В то время некий безымянный печатник создал большую коллекцию
+                                            размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hair-products__buttons">
+                        <div class="button-prev2">
+                            <svg class="hair-products__arrow">
+                                <use xlink:href="#arrow">
+                            </svg>
+                        </div>
+                        <div class="button-next2">
+                            <svg class="hair-products__arrow right">
+                                <use xlink:href="#arrow">
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Hair-products -->
+
+    <!-- Contacts -->
+    <section class="section__contacts" id="contacts">
+        <div class="container">
+            <div class="contacts__inner">
+                <div class="contacts__top">
+                    <div class="contacts__feedback">
+                        <div class="title">Остались Вопросы?</div>
+                        <div class="subtitle">Вы можете оставить свой вопрос и вскоре получите ответ на свою почту.
+                        </div>
+                        <form class="contacts__form" action="mail.php" method="POST">
+                            <input class="contacts__input" type="text" name="user_name" placeholder="Ваше имя" required>
+                            <input class="contacts__input" type="text" namre="user_email"
+                                placeholder="Ваша электронная почта" required>
+                            <textarea class="contacts__textarea" name="" id="" name="user_question"
+                                placeholder="Ваш вопрос" required></textarea>
+                            <button class="contacts__button" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="contacts__datas">
+                        <div class="title">Контакты</div>
+                        <a href="https://vk.com/queenlity39" class="contacts__item">
+                            <svg class="contracts__icon">
+                                <use xlink:href="#vk">
+                            </svg>
+                            <div class="text">vk.com/queenlity39</div>
+                        </a>
+                        <a href="tel:+79125566940" class="contacts__item">
+                            <svg class="contracts__icon">
+                                <use xlink:href="#tel">
+                            </svg>
+                            <div class="text">+7(912)-556-69-40</div>
+                        </a>
+                        <div class="contacts__item">
+                            <svg class="contracts__icon">
+                                <use xlink:href="#loc">
+                            </svg>
+                            <div class="text">Зеленоградск, Калининградская область, ул. Ленина 3, 3 этаж</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__bottom">
+                    <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A810ed4b9cfa3e5a0d8805ceaac7ed9d3edddf30f11939d41eba555983acc476b&amp;&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Contacts -->
+</body>
+
+<script src="assets/scripts/slider.js"></script>
+<script src="assets/scripts/price-list-switcher.js"></script>
+<script src="assets/scripts/script.js"></script>
+<script src="assets/scripts/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</html>
